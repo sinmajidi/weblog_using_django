@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+<!-- {% block title %}-->
+<!--    Articles_detail-->
+<!-- {% endblock %}-->
+ {% block body %}
+<div class="container">
+      <h1>articles</h1>
+      <hr>
+
+      <h2>{{article.title}}</h2>
+      <p>{{article.body}}</p>
+      <p>{{article.date}}</p>
+      <hr>
+
+    </div>
+ {% endblock %}
