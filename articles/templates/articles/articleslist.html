@@ -7,7 +7,7 @@
       <h1>articles list</h1>
       <hr>
       {% for  article in articles %}
-      <h2><a href="#">{{article.title}}</a></h2>
+      <h2><a href="{% url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h2>
       <!--<p>{{article.body}}</p>--> <!-- for full article text-->
       <p>{{article.snip}}</p> <!--for 50 caracter view-->
       <p>{{article.date}}</p>
