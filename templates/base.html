@@ -8,6 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="  {% static 'styles.css' %}">
   </head>
+  <nav>
+    <ul>
+      <li>
+        <form class="logout0" action="{% url 'accounts:logout'%}" method="post">
+         {%csrf_token%}
+          <button type="submit" value="logout">logout</button>
+        </form>
+      </li>
+    </ul>
+  </nav>
   <body>
    {% block body %}
       {% endblock %}
