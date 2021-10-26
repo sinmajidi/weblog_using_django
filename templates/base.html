@@ -10,12 +10,25 @@
   </head>
   <nav>
     <ul>
+      {% if user.is_authenticated %}
       <li>
-        <form class="logout0" action="{% url 'accounts:logout'%}" method="post">
-         {%csrf_token%}
-          <button type="submit" value="logout">logout</button>
-        </form>
+<!--        <form class="logout0" action="{% url 'accounts:logout'%}" method="post">-->
+<!--         {%csrf_token%}-->
+<!--          <button type="submit" value="logout">logout</button>-->
+<!--        </form>-->
+        <a href="{% url 'accounts:logout' %}"> logout </a>
       </li>
+       <li>
+        <a href="{% url 'articles:create' %}"> creat new article </a>
+      </li>
+      {% else %}
+      <li>
+        <a href="{% url 'accounts:login' %}"> login </a>
+      </li>
+       <li>
+        <a href="{% url 'accounts:signup' %}"> signup </a>
+      </li>
+      {% endif %}
     </ul>
   </nav>
   <body>
