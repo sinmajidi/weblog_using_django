@@ -53,6 +53,7 @@ nav li
     border:1px solid #00dba0;
     position:relative;
     padding-bottom:40px;
+    background-color:rgb(0,219,160,0.2);
 }
 article h2
 {
@@ -104,6 +105,7 @@ color:#0f121f;
 .site-form
 {
     margin-top:60px;
+    background-color:rgb(0,219,160,0.2);
     border:1px solid #00dba0;
     padding:20px;
 }
@@ -175,11 +177,10 @@ margin:10px 0;
     border:0;
     color:#fff;
     font-size:1.2em;
-    background:none;
+    background-color:rgb(0,219,160,0.2);
     border-radius:4px;
     border:1px solid #00dba0;
     margin:10px;
-    background:none;
     padding:10px;
 
 }
