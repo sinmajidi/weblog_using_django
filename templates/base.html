@@ -6,9 +6,11 @@
       {% endblock %}
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="  {% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
   </head>
-  <nav>
+  <header>
+      <nav>
     <ul>
       {% if user.is_authenticated %}
       <li>
@@ -16,23 +18,27 @@
 <!--         {%csrf_token%}-->
 <!--          <button type="submit" value="logout">logout</button>-->
 <!--        </form>-->
-        <a href="{% url 'accounts:logout' %}"> logout </a>
+        <a class="logout" href="{% url 'accounts:logout' %}"> logout </a>
       </li>
        <li>
-        <a href="{% url 'articles:create' %}"> creat new article </a>
+        <a class="highlight" href="{% url 'articles:create' %}"> creat new article </a>
       </li>
       {% else %}
       <li>
-        <a href="{% url 'accounts:login' %}"> login </a>
+        <a class="highlight" href ="{% url 'accounts:login' %}"> login </a>
       </li>
        <li>
-        <a href="{% url 'accounts:signup' %}"> signup </a>
+        <a class="highlight" href="{% url 'accounts:signup' %}"> signup </a>
       </li>
       {% endif %}
     </ul>
   </nav>
+  </header>
   <body>
-   {% block body %}
+  <div class="wrapper">
+     {% block body %}
       {% endblock %}
+  </div>
   </body>
+
 </html>
