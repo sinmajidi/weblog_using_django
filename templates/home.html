@@ -1,12 +1,14 @@
-<html>
-  <head>
-    <title>home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
-    <div class="container">
-      <h1>home</h1>
+{% extends 'base.html' %}
+ {% block title %}
+   home
+ {% endblock %}
+ {% block body %}
+<div class="wrapper">
+    <div class="welcome">
+        <p>welcome to my weblog!</p>
+        <p>i hope we can share our articles about IOT,Programing,Computer sciense,Artifical inteligense and etc...</p>
+         <p>you can signup and help world using your knowledge!</p>
     </div>
-  </body>
-</html>
+
+</div>
+ {% endblock %}

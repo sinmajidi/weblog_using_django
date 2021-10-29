@@ -12,6 +12,15 @@
   <header>
       <nav>
     <ul>
+         <li>
+        <a class="highlight" href="/"> HOME </a>
+      </li>
+        <li>
+        <a class="highlight" href="/about"> about </a>
+      </li>
+        <li>
+        <a class="highlight" href="{% url 'articles:list' %}"> see the articles </a>
+      </li>
       {% if user.is_authenticated %}
       <li>
 <!--        <form class="logout0" action="{% url 'accounts:logout'%}" method="post">-->
@@ -32,6 +41,7 @@
       </li>
       {% endif %}
     </ul>
+
   </nav>
   </header>
   <body>

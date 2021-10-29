@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-<!-- {% block title %}-->
-<!--    Articles_detail-->
-<!-- {% endblock %}-->
+ {% block title %}
+    {{article.title}}
+ {% endblock %}
  {% block body %}
-<div class="wrapper">
+
     <div class="article-detail">
          <div class="article">
 
@@ -11,9 +11,8 @@
       <h2>{{article.title}}</h2>
       <hr>
       <p class="article-body">{{article.body}}</p>
-      <hr>
       <p class="article-date">{{article.date}}</p>
          </div>
     </div>
-</div>
+
  {% endblock %}

@@ -4,11 +4,11 @@ from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from django.conf.urls.static import static
-
+app_name='firstproject'
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('about/', views.aboutpage),
-    path('', views.homepage),
+    path('about/', views.aboutpage,name='about'),
+    path('', views.homepage,name='home'),
     path('articles/',include('articles.urls')),
     path('accounts/',include('accounts.urls'))
 ]
